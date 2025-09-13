@@ -1,0 +1,15 @@
+import pandas as pd 
+import matplotlib.pyplot as plt 
+df = pd.read_csv("coffee_sales.csv") 
+print("Coffee Sales Data:") 
+print(df) 
+df.plot(x="month", y="sales_kg", kind="bar", color="saddlebrown", legend=False) 
+plt.title("Coffee Sales (kg) Over 5 Months") 
+plt.xlabel("Month") 
+plt.ylabel("Sales (kg)") 
+plt.show() 
+df.plot(x="month", y="revenue", kind="line", marker="o", color="green", legend=False) 
+plt.title("Coffee Revenue Over 5 Months") 
+plt.xlabel("Month") 
+plt.ylabel("Revenue (SAR)") 
+plt.show() 
